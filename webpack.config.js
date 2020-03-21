@@ -10,7 +10,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: {
+          loader: "babel-loader",
+          options: {
+              filename: '[name][sha1].[ext]'
+            }
+        },
       },
       {
         test: /\.css$/,
@@ -18,8 +23,24 @@ module.exports = {
       },
 
       {
-        test: /\.s[ca]ss$/,
-        use: [MiniCssExtractPlugin.loader,"css-loader", "sass-loader"],
+        test: /\.(s[ca]ss)$/,
+        use: [{
+          loader: MiniCssExtractPlugin.loader, // inject CSS to page
+        }, {
+          loader: 'css-loader', // translates CSS into CommonJS modules
+        }, {
+          loader: 'postcss-loader', // Run post css actions
+          options: {
+            plugins: function () { // post css plugins, can be exported to postcss.config.js
+              return [
+                require('precss'),
+                require('autoprefixer')
+              ];
+            }
+          }
+        }, {
+          loader: 'sass-loader' // compiles Sass to CSS
+        }]
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -56,6 +77,9 @@ module.exports = {
     'main': './src/main.js',
     'index': './src/index/index.js',
     'product': './src/product/product.js',
+  },
+  output: {
+    filename: "[name]-[hash:7].js",
   },
   plugins: [
     new HtmlWebpackPlugin({

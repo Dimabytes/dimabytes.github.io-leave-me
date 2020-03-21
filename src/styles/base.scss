@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "~bootstrap/scss/bootstrap";
 @import "fonts";
 $imagedir:'../images/'; // base image path
 
@@ -14,14 +15,70 @@ $imagedir:'../images/'; // base image path
   background-position: center center;
   background-size: cover;
 }
-body{
+@media only screen and (max-width: 1800px){
+  html{font-size:15px;}
+}
 
-  main{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+@media only screen and (max-width: 1560px){
+  html{font-size:14px;}
+}
+
+@media only screen and (max-width: 1320px){
+  html{font-size:13px;}
+}
+
+@media only screen and (max-width: 1080px){
+  html{font-size:12px;}
+}
+
+@media only screen and (max-width: 840px){
+  html{font-size:11px;}
+}
+
+@media only screen and (max-width: 610px){
+  html{font-size:10px;}
+}
+html{
+  background: #fff5f5;
+}
+body{
+  @include background('bg.jpg');
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+nav.main-nav{
+  padding-top: 2rem;
+  .logo{
+    img{
+      width: 30rem;
+      left: calc(50% - 15rem);
+      position:relative;
+    }
+  }
+  .bag-icon{
+    height: 3rem;
+    padding-right: 6rem;
+  }
+}
+
+@include media-breakpoint-down(md){
+
+  nav.main-nav {
+    margin: 0;
+    >div{
+      padding: 0;
+    }
+    .logo {
+      img {
+        width: 20rem;
+        left: calc(50% - 10rem);
+      }
+    }
+    .bag-icon{
+      height: 2.5rem;
+      padding-right: 1.5rem;
+    }
   }
 
 }
