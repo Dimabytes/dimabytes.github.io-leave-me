@@ -19,7 +19,35 @@ module.exports = {
       {
         test: /\.s[ca]ss$/,
         use: [MiniCssExtractPlugin.loader,"css-loader", "sass-loader"],
-      }
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.png|jpg|jpeg|gif$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: 'images/',
+              name: '[name]-[sha1:hash:7].[ext]'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+      },
     ],
 
   },
