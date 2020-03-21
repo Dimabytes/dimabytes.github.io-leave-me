@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -71,6 +72,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name]-[hash:7].css'
     }),
+    new CleanWebpackPlugin(),
   ],
   devServer: {
     open: true,
