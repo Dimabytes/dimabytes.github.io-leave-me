@@ -55,3 +55,13 @@ $fontsdir:'../fonts/'; // base image path
   font-weight: 800;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url($fontsdir + 'Roboto-Regular.eot');
+  src: url($fontsdir + 'Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+  url($fontsdir + 'Roboto-Regular.woff') format('woff'),
+  url($fontsdir + 'Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
