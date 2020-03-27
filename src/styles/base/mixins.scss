@@ -1,0 +1,16 @@
+@charset "UTF-8";
+$imagedir:'../../images/'; // base image path
+
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+
+@mixin background($filename,$repeat: no-repeat) {
+  background: transparent url(#{$imagedir}#{$filename}) $repeat;
+  background-position: center center;
+  background-size: cover;
+}

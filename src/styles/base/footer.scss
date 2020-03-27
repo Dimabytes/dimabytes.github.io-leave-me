@@ -1,0 +1,41 @@
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .w-7r{
+    width: 7rem;
+  }
+  a, p, img{
+    margin: 0;
+    max-width: 100%;
+    text-transform: uppercase;
+    color: #616161;
+  }
+  a{
+    font-family: "Dhurjati", sans-serif;
+  }
+  p{
+    font-family: "Codec Pro", sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+  }
+
+  .links{
+    a{
+      margin: 0 0.2rem;
+    }
+    .link__insta{
+      img{
+        height: 20px;
+
+      }
+    }
+    .link__vk{
+      img{
+        height: 20px;
+
+      }
+    }
+  }
+}
+
