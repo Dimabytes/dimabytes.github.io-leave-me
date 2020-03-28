@@ -7,8 +7,10 @@
     height: 24rem;
     background: transparent;
     border: unset;
+    margin-bottom: 2.5rem;
   }
   .card-title{
+    margin-bottom: 0;
     img{
       height: 16rem;
       object-fit: scale-down;
@@ -18,11 +20,13 @@
     font-family: "Dhurjati", sans-serif;
     font-size: 1.5rem;
     color: #616161;
+    margin-bottom: 0;
   }
   .product__cost{
     font-family: "Dhurjati", sans-serif;
     font-size: 1.3rem;
     color: #616161;
+    margin-bottom: 0;
   }
   .product-card:hover{
     .product__title, .product__cost{
