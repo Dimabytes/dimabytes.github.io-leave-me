@@ -13,6 +13,7 @@ $('.card-title').slick({
   cssEase: 'linear'
 });
 
+
 $('.card-title').hover(function () {
   console.log($(this))
     $(this).slick('slickNext')
