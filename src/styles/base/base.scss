@@ -4,25 +4,42 @@
 @import "mixins";
 @import "header";
 @import "footer";
+@import "normalize.css";
 
+a:hover{
+  color: unset;
+  border-bottom: unset;
+  text-decoration: unset;
+}
 
 main{
   overflow: hidden;
 }
 
-html{
-  background: #fff5f5;
-  overflow: hidden;
-  color: #333;
-  font-family: "Roboto", sans-serif;
-
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 1rem;
 }
 
+html{
+  background: #fff5f5;
+  overflow-x: hidden;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+}
+
+
+
 body{
-  overflow: hidden;
+  overflow-x: hidden;
   @include background('bg.jpg');
+  background-attachment: fixed;
   min-width: 100vw;
   min-height: 100vh;
+  position: relative;
+  padding-bottom: 5rem;
 }
 
 img{max-width: 100%;}
