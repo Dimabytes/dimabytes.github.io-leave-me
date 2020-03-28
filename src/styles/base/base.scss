@@ -27,19 +27,24 @@ html{
   background: #fff5f5;
   overflow-x: hidden;
   color: #333;
-  font-family: "Roboto", sans-serif;
+
 }
 
 
 
 body{
+  font-family: "Roboto Condensed", sans-serif;
   overflow-x: hidden;
   @include background('bg.jpg');
   background-attachment: fixed;
   min-width: 100vw;
-  min-height: calc(100 * var(--vh));
+  min-height: 100vh;
   position: relative;
   padding-bottom: 5rem;
+}
+
+main{
+  margin-top: 4rem;
 }
 
 img{max-width: 100%;}
