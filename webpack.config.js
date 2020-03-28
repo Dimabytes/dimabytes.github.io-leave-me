@@ -90,7 +90,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/product/product.html",
-      filename: "product/product.html",
+      filename: "product.html",
       chunks: ['product','main']
     }),
     new MiniCssExtractPlugin({

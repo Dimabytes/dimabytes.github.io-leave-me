@@ -37,7 +37,7 @@ body{
   @include background('bg.jpg');
   background-attachment: fixed;
   min-width: 100vw;
-  min-height: calc(100vh - calc(100vh - 100%));
+  min-height: calc(100 * var(--vh));
   position: relative;
   padding-bottom: 5rem;
 }

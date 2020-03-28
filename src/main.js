@@ -10,3 +10,11 @@ $('.toggle-bag').on('click', () => {
 $('.sidebar__close').on('click', () => {
   $('.cart__sidebar').toggleClass('active')
 });
+
+window.addEventListener('resize', () => {
+  document.querySelector(':root').style
+    .setProperty('--vh', window.innerHeight/100 + 'px');
+})
+
+document.querySelector(':root').style
+  .setProperty('--vh', window.innerHeight/100 + 'px');
