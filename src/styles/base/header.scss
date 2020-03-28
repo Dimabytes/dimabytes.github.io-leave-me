@@ -1,5 +1,5 @@
 nav.main-nav{
-  padding-top: 2rem;
+  padding-top: 1rem;
   .main-nav__logo{
     img{
       width: 30rem;
@@ -8,14 +8,16 @@ nav.main-nav{
       max-width: unset;
     }
   }
-  .main-nav__bag-icon{
-    height: 3rem;
+  .main-nav__cart-icon{
+    height: 2.6rem;
     padding-right: 6rem;
     cursor: pointer;
   }
+
 }
 
 .cart__sidebar{
+  z-index: 1000;
   position: fixed;
   height: 100%;
   width: 25rem;
@@ -26,14 +28,27 @@ nav.main-nav{
 
   background: #b50203;
   transition-duration: 1s;
-  .sidebar__body{
-    margin-top: 20%;
-  }
-  .cart__row{
-    margin-bottom: 1rem;
+  .sidebar__header{
+    margin-top: 1.5rem;
     p{
       margin-bottom: 0;
+      letter-spacing: 0.1rem;
+      font-family: "Codec Pro", sans-serif;
     }
+  }
+  .sidebar__body{
+    margin-top: 8%;
+  }
+  .cart__row{
+    padding: 0.75rem 0;
+    border-bottom: 1px solid black;
+    p{
+      margin-bottom: 0;
+      color: white;
+    }
+  }
+  .cart__row:last-child{
+    border-bottom: unset;
   }
   .cart__product-name{
     text-transform: uppercase;
@@ -48,17 +63,17 @@ nav.main-nav{
     width: 1rem;
     cursor: pointer;
   }
+  .product__close{
+    width: 0.75rem;
+    cursor: pointer;
+    max-width: unset;
+  }
 }
 .cart__sidebar.active{
   right: 0;
 }
 
 @include media-breakpoint-down(md) {
-  .btn-primary {
-    background: #000;
-    border-color: #000;
-    font-size: 1.5rem;
-  }
   nav.main-nav {
     margin: 0;
 
@@ -73,14 +88,14 @@ nav.main-nav{
       }
     }
 
-    .main-nav__bag-icon {
+
+    .main-nav__cart-icon {
       height: 2.5rem;
       padding-right: 1.5rem;
     }
   }
   .cart__sidebar {
-    font-size: 1.5rem;
-
+    font-size: 1rem;
     width: 100vw;
     right: -100vw;
   }

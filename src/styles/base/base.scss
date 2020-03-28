@@ -7,9 +7,6 @@
 
 
 main{
-  @include background('bg.jpg');
-  min-width: 100vw;
-  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -18,9 +15,15 @@ html{
   overflow: hidden;
   color: #333;
   font-family: "Roboto", sans-serif;
+
 }
 
-body{overflow: hidden;}
+body{
+  overflow: hidden;
+  @include background('bg.jpg');
+  min-width: 100vw;
+  min-height: 100vh;
+}
 
 img{max-width: 100%;}
 
@@ -32,12 +35,4 @@ img{max-width: 100%;}
 .btn-primary:hover, .btn-primary:focus{
   background: #000;
   border-color: #ff0b0a;
-}
-
-@include media-breakpoint-down(md){
-  .btn-primary{
-    background: #000;
-    border-color: #000;
-    font-size: 1.5rem;
-  }
 }
