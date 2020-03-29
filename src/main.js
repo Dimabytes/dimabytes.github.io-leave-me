@@ -7,6 +7,6 @@ $('.toggle-bag').on('click', () => {
   $('.cart__sidebar').toggleClass('active')
 });
 
-$('.sidebar__close').on('click', () => {
+$('.close__sidebar').on('click', () => {
   $('.cart__sidebar').toggleClass('active')
 });

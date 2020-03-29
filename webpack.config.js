@@ -76,6 +76,7 @@ module.exports = {
     'main': './src/main.js',
     'index': './src/index/index.js',
     'product': './src/product/product.js',
+    'checkout': './src/checkout/checkout.js',
   },
   output: {
     filename: "[name]-[hash:7].js",
@@ -92,6 +93,12 @@ module.exports = {
       template: "./src/product/product.html",
       filename: "product.html",
       chunks: ['product','main']
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/checkout/checkout.html",
+      filename: "checkout.html",
+      chunks: ['checkout', 'main']
+
     }),
     new MiniCssExtractPlugin({
       filename: '[name]-[hash:7].css'

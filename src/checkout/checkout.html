@@ -62,47 +62,68 @@
 </div>
 <main class="product-page">
     <div class="container-xl">
-        <div class="row singe-product">
-            <div class="col-md-6 images__product">
-                <div class="wrapper__images">
-                    <img src="../images/product.png">
-                    <img src="../images/product_back.png">
-                </div>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-5 info__product">
+        <div class="col-md-8 order-md-1">
+            <h1 class="mb-3 main-header">Доставка</h1>
+            <form style="background: white; padding: 1rem; border-radius: 1rem" class="needs-validation" novalidate="">
                 <div class="row">
-                    <h1 class="header__product">LEAVE ME "OBESSION" T-SHIRT</h1>
-                </div>
-                <div class="row">
-                    <h3 class="cost__product">1000 RUB</h3>
-                </div>
-                <div class="row controls__product">
-                    <div class="col6">
-                        <div class="form-group">
-                            <select class="form-control select__product">
-                                <option>XS</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                            </select>
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">Имя</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            Имя обязательно
                         </div>
                     </div>
-                    <div class="col6">
-                        <div class="btn btn-primary btn-product">В корзину</div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Фамилия</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            Фамилия обязательна
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <p class="text__product"> Цвет: черный<br>
-                        Состав: 100% Хлопок
-                    </p>
+
+                <div class="mb-3">
+                    <label for="address">Адрес</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                    <div class="invalid-feedback">
+                        А куда доставлять?
+                    </div>
                 </div>
+
                 <div class="row">
-                    <a class="link__product" href="#">Таблица размеров</a>
+                    <div class="col-md-4 mb-4">
+                        <label for="zip">Индекс</label>
+                        <input type="text" class="form-control" id="zip" placeholder="" required="">
+                        <div class="invalid-feedback">
+                            Индекс обязателен
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <label for="tel">Телефон<span class="text-muted"></span></label>
+                        <input type="tel" class="form-control" id="tel" placeholder="89811111111" required="">
+                        <div class="invalid-feedback">
+                            Введите телефон
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <label for="email">Email <span class="text-muted"></span></label>
+                        <input type="email" class="form-control" id="email" required="" placeholder="you@example.com">
+                        <div class="invalid-feedback">
+                            Email не валидный
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+
+
+
+                <small class="form-text text-muted">Пока что мы доставляем только по Санкт-Петербургу.</small>
+                <div class="mb-3"></div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Заказать</button>
+            </form>
         </div>
-    </div>
+
+        </div>
 
 </main>
 <footer class="container-fluid">

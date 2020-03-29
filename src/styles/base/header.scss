@@ -1,5 +1,7 @@
-nav.main-nav{
+.main-nav{
   padding-top: 1rem;
+
+}
   .main-nav__logo{
     img{
       width: 30rem;
@@ -14,9 +16,7 @@ nav.main-nav{
     cursor: pointer;
   }
 
-}
-
-.cart__sidebar{
+.cart__sidebar {
   z-index: 1000;
   position: fixed;
   height: 100%;
@@ -25,9 +25,9 @@ nav.main-nav{
   top: 0;
   color: white;
   font-size: 1rem;
-
   background: #b50203;
   transition-duration: 1s;
+}
   .sidebar__header{
     margin-top: 1.5rem;
     p{
@@ -36,7 +36,7 @@ nav.main-nav{
       font-family: "Codec Pro", sans-serif;
     }
   }
-  .sidebar__body{
+  .body__sidebar{
     margin-top: 8%;
   }
   .cart__row{
@@ -53,46 +53,64 @@ nav.main-nav{
   .cart__product-name{
     text-transform: uppercase;
   }
-  .sidebar__footer{
+  .footer__sidebar{
     margin-top: 2rem;
   }
-  .sidebar__close{
+  .close__sidebar{
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
     width: 1rem;
     cursor: pointer;
   }
-  .product__close{
+  .close__product{
     width: 0.75rem;
     cursor: pointer;
     max-width: unset;
   }
-}
 .cart__sidebar.active{
   right: 0;
 }
+.control__sidebar{
+  max-width: unset;
+  width: 1rem;
+  position: absolute;
+  top: calc(50% - 0.5rem);
+  cursor: pointer;
+}
+.control__sidebar.left{
+  left: -1.5rem;
+}
+
+.control__sidebar.right{
+  right: -1.5rem;
+}
+
+.count__sidebar{
+  p{
+    position: relative;
+    left: 1.5rem;
+    width: fit-content;
+  }
+}
 
 @include media-breakpoint-down(md) {
-  nav.main-nav {
+  .main-nav {
     margin: 0;
-
     > div {
       padding: 0;
     }
 
-    .main-nav__logo {
-      img {
-        width: 14rem;
-        left: calc(50% - 7rem);
-      }
+  }
+  .main-nav__logo {
+    img {
+      width: 14rem;
+      left: calc(50% - 7rem);
     }
-
-
-    .main-nav__cart-icon {
-      height: 2.5rem;
-      padding-right: 1.5rem;
-    }
+  }
+  .main-nav__cart-icon {
+    height: 2.5rem;
+    padding-right: 1.5rem;
   }
   .cart__sidebar {
     font-size: 1rem;
