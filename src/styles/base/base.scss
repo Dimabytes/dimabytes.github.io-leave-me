@@ -51,16 +51,18 @@ img{max-width: 100%;}
 
 .btn{
   padding: 0.175rem 0.55rem;
+  outline: unset!important;
+  box-shadow: unset!important;
 }
 
 .btn-primary{
-  background: #000;
+  background-color: #000;
   border-color: #000;
 }
 
-.btn-primary:hover, .btn-primary:focus{
-  background: #000;
-  border-color: #ff0b0a;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
+  background-color: #000;
+  border-color: #000;
 }
 
 .main-header{
