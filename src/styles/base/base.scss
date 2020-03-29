@@ -3,6 +3,7 @@
 @import "fonts";
 @import "mixins";
 @import "header";
+@import "responsive";
 @import "footer";
 @import "normalize.css";
 
@@ -50,7 +51,6 @@ main{
 img{max-width: 100%;}
 
 .btn{
-  padding: 0.175rem 0.55rem;
   outline: unset!important;
   box-shadow: unset!important;
 }
