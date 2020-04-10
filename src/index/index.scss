@@ -12,22 +12,4 @@
       object-fit: scale-down;
     }
   }
-  .product__title{
-    font-family: "Dhurjati", sans-serif;
-    font-size: 1.5rem;
-    color: #616161;
-    margin-bottom: 0;
-  }
-  .product__cost{
-    font-family: "Dhurjati", sans-serif;
-    font-size: 1.3rem;
-    color: #616161;
-    margin-bottom: 0;
-  }
-  .product-card:hover{
-    .product__title, .product__cost{
-      color: #333333;
-    }
-
-  }
 

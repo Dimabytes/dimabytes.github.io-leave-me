@@ -28,10 +28,7 @@ html{
   background: #fff5f5;
   overflow-x: hidden;
   color: #333;
-
 }
-
-
 
 body{
   font-family: "Roboto Condensed", sans-serif;
@@ -54,6 +51,29 @@ img{max-width: 100%;}
   outline: unset!important;
   box-shadow: unset!important;
 }
+
+.form-control:focus {
+  background: inherit;
+  outline: unset;
+  box-shadow: unset;
+  border-color: unset;
+}
+
+
+
+.foo > div{
+  background: red;
+}
+
+
+
+
+
+
+
+
+
+
 
 .btn-primary{
   background-color: #000;

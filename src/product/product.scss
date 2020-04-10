@@ -3,7 +3,13 @@
 @import "node_modules/bootstrap/scss/mixins";
 
 .singe-product {
-  color: #313131;
+  color: black;
+  width: 100%;
+}
+.info__product{
+  background: #e67780;
+  padding: 2rem;
+  height: fit-content;
 }
 
     .header__product{
@@ -23,22 +29,26 @@
     .select__product{
       font-size: 1rem;
       width: 9.5rem;
+      background: transparent;
+      border: black 1px solid;
     }
     .text__product{
-      font-family: "Codec Pro News", sans-serif;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
     }
     .link__product{
       font-size: 1.3rem;
-      font-family: "Codec Pro News", sans-serif;
-      color: #313131;
+      font-family: "Roboto", sans-serif;
+      color: black;
     }
 .btn-product{
       width: 9.5rem;
     }
     .images__product{
+      padding-top: 2rem;
       img{
-        height: 23rem;
-        object-fit: scale-down;
+        height: 33rem;
+        object-fit: contain;
       }
     }
     .nav__slider{
@@ -47,26 +57,27 @@
       top: calc(50% - 1.5rem);
       cursor: pointer;
       z-index: 1;
+      padding: 0.5rem;
+      background: black;
+      border-radius: 50%;
     }
     .slider__nav-right{
       right: 0;
     }
     .controls__product{
-      width: 75%;
       justify-content: space-between;
     }
-@include media-breakpoint-down(sm) {
-      .info__product{
-        >.row{
-          justify-content: center;
-        }
-        >.controls__product{
-          width: 100%;
-          justify-content: space-around;
-        }
-        p{
-          text-align: center;
-        }
-      }
 
+
+@include media-breakpoint-down(md) {
+  .product__container{
+    padding: 0 2rem;
+  }
+
+}
+@include media-breakpoint-down(sm) {
+.singe-product{
+  width: calc(100% - 1rem);
+  max-width: 30rem;
+}
 }
