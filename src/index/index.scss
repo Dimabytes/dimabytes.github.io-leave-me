@@ -1,3 +1,7 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
   .product-card{
     background: transparent;
     border: unset;
@@ -8,4 +12,11 @@
       object-fit: scale-down;
     }
   }
+
+@include media-breakpoint-down(sm) {
+  .btn-primary{
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+}
 
